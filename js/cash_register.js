@@ -1,30 +1,23 @@
-var dispBox = document.getElementById('displayBox');
-var showNum = document.getElementById('displayBox');
-
-var opp = document.getElementById('operatorBox');
+var displayBox = document.getElementById('displayBox');
 var operatorBox =  document.getElementById('operatorBox');
-
 var btnBox =  document.getElementById('btnBox');
-
-
-display();
 
 createNumbers([0,1,2,3,4,5,6,7,8,9]);
 
 createOp(['+','-','*','/']);
 
+/*display();
 function display(){
   var displayBox = document.createElement('input');
   displayBox.innerHTML = this.id;
   dispBox.appendChild(displayBox);
-}
+}*/
 
 function createNumbers(numbers){
   for (var i = 0 ; i < numbers.length; i ++){
     var btn = document.createElement('button');
     btn.id = numbers[i];
     btn.innerHTML = numbers[i];
-    display.innerHTML = showNum;
     btn.addEventListener('click',function(){
       console.log(this.id);
     });
@@ -44,6 +37,12 @@ function createOp(calcOp){
   }
 }
 
-var numButsArray=[
-  {}
-];
+btn.addEventListener('click',function(){
+    console.log(this.value);
+    displayBox.value += this.value;
+  });
+
+/* var displayBox = document.createElement('input');
+displayBox.id = 'display';
+displayBox.innerHTML = this.id;
+dispBox.appendChild(displayBox);*/

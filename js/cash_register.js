@@ -1,48 +1,61 @@
-var displayBox = document.getElementById('displayBox');
-var operatorBox =  document.getElementById('operatorBox');
-var btnBox =  document.getElementById('btnBox');
+var phoneCalculator = calculatorModule();
+var presentDisplay = '';
+var displayBox = document.getElementById('display');
+  display.innerHTML = presentDisplay;
 
-createNumbers([0,1,2,3,4,5,6,7,8,9]);
+var storedNum = 0;
 
-createOp(['+','-','*','/']);
-
-/*display();
-function display(){
-  var displayBox = document.createElement('input');
-  displayBox.innerHTML = this.id;
-  dispBox.appendChild(displayBox);
-}*/
-
-function createNumbers(numbers){
-  for (var i = 0 ; i < numbers.length; i ++){
-    var btn = document.createElement('button');
-    btn.id = numbers[i];
-    btn.innerHTML = numbers[i];
-    btn.addEventListener('click',function(){
-      console.log(this.id);
-    });
-    btnBox.appendChild(btn);
-  }
+function updateDisplay(content){
+   var display = document.getElementById('display');
+   display.innerHTML = display.innerHTML + content;
 }
 
-function createOp(calcOp){
-  for (var i = 0; i < calcOp.length; i ++){
-    var btn = document.createElement('button');
-    btn.id = calcOp[i];
-    btn.innerHTML = calcOp[i];
-    btn.addEventListener('click',function(){
-      console.log(this.id);
-    });
-    operatorBox.appendChild(btn);
-  }
-}
+var showZero = document.getElementById('zero');
+  showZero.addEventListener('click',function(){
+  updateDisplay(0);
+});
 
-btn.addEventListener('click',function(){
-    console.log(this.value);
-    displayBox.value += this.value;
-  });
+var showOne = document.getElementById('one');
+  showOne.addEventListener('click',function(){
+  updateDisplay(1);
+});
 
-/* var displayBox = document.createElement('input');
-displayBox.id = 'display';
-displayBox.innerHTML = this.id;
-dispBox.appendChild(displayBox);*/
+var showTwo = document.getElementById('two');
+  showTwo.addEventListener('click',function(){
+  updateDisplay(2);
+});
+
+var showThree = document.getElementById('three');
+  showThree.addEventListener('click',function(){
+  updateDisplay(3);
+});
+
+var showFour = document.getElementById('four');
+  showFour.addEventListener('click',function(){
+  updateDisplay(4);
+});
+
+var showFive = document.getElementById('five');
+  showFive.addEventListener('click',function(){
+  updateDisplay(5);
+});
+
+var showSix = document.getElementById('six');
+  showSix.addEventListener('click',function(){
+  updateDisplay(6);
+});
+
+var showSeven = document.getElementById('seven');
+  showSeven.addEventListener('click',function(){
+  updateDisplay(7);
+});
+
+var showEight = document.getElementById('eight');
+  showEight.addEventListener('click',function(){
+  updateDisplay(8);
+});
+
+var showNine = document.getElementById('nine');
+  showNine.addEventListener('click',function(){
+  updateDisplay(9);
+});

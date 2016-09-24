@@ -47,7 +47,7 @@ function calculatorModule(){
 
 function calctest(x){
   if(typeof x !== 'number'){
-    throw new Error('Wrong data type!');
+    throw new Error('Wrong data ding dong!');
   }
 }
    return module;
